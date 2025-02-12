@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <style>
+        body {
+            background-color: black;
+            color: yellow;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #searchBar {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        #gamesList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #gamesList li {
+            margin: 10px 0;
+        }
+
+        #gamesList a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #gamesList a:hover {
+            text-decoration: underline;
+            color: red; /* Turns red when hovered */
+        }
+    </style>
+    <script>
+        function searchGames() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let games = document.querySelectorAll("#gamesList li");
+
+            games.forEach(game => {
+                let text = game.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    game.style.display = "block";
+                } else {
+                    game.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Game Hub!</h1>
+    <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Search for a game...">
+    <ul id="gamesList">
+        <li><a href="Big Tower Tiny Square.htm">Big Tower Tiny Square</a></li>
+        <li><a href="BitLife.htm">BitLife</a></li>
+        <li><a href="BloonsTD.htm">Bloons TD</a></li>
+        <li><a href="CTR.htm">CTR</a></li>
+        <li><a href="CTRH.htm">CTRH</a></li>
+        <li><a href="CTRTT.htm">CTRTT</a></li>
+        <li><a href="ChromeDino.htm">Chrome Dino</a></li>
+        <li><a href="Cluster Rush1.htm">Cluster Rush</a></li>
+        <li><a href="CraftMine.htm">CraftMine</a></li>
+        <li><a href="DogeMiner.htm">Doge Miner</a></li>
+        <li><a href="DriveMad.htm">Drive Mad</a></li>
+        <li><a href="ENT.htm">ENT</a></li>
+        <li><a href="EaglerCraft.htm">EaglerCraft</a></li>
+        <li><a href="MOTOX3M.htm">MOTOX3M</a></li>
+        <li><a href="Poly Track 1.htm">Poly Track 1</a></li>
+        <li><a href="PushTheSquare.htm">Push The Square</a></li>
+        <li><a href="RetroBowl.htm">Retro Bowl</a></li>
+        <li><a href="SmashKarts.htm">Smash Karts</a></li>
+        <li><a href="SnowRider3d.htm">Snow Rider 3D</a></li>
+        <li><a href="StickWar.htm">Stick War</a></li>
+        <li><a href="StickmanHook.htm">Stickman Hook</a></li>
+        <li><a href="Vex3.htm">Vex 3</a></li>
+        <li><a href="Vex4.htm">Vex 4</a></li>
+        <li><a href="Vex5.htm">Vex 5</a></li>
+        <li><a href="Vex6.htm">Vex 6</a></li>
+        <li><a href="Vex7.htm">Vex 7</a></li>
+        <li><a href="n-gon.htm">n-gon</a></li>
+    </ul>
+</body>
+</html>
